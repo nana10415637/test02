@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax</title>
+
+    <style>
+        /* 讓錨點用滑順的移動 */
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: 0px;
+        
+
+        }
+
+        /* #{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        } */
+
+        /* a:last-child{
+            margin: 0px;
+               top: 0px;
+        } */
+
+       /* top導覽列 */
+        nav{
+           width: 100%;
+           height: 50px;
+           background-color: rgb(235, 236, 128);
+           padding-top: 0px 50px;
+           line-height: 50px;
+           position: fixed;
+           top: 0px;
+           left: 0px;
+           z-index:1 ;
+          
+        }   
+
+        .navtop{
+              
+            float:right ;
+            padding-right: 20px;
+            text-align: center;
+            
+            
+        }
+
+      
+        .nav01{
+            margin-right: 10px; 
+            font-size: large;
+            color:black;
+            letter-spacing: 3px;
+            
+            
+            
+        }
+
+        .nav01:hover{
+            background-color: rgb(255, 255, 255);
+            color: chocolate;
+           
+           
+        }
+
+        .nav02{
+            
+            width: 50px;
+            height: 50px;
+            margin-right: 10px; 
+            font-size: large;
+            color:black;
+            letter-spacing: 3px;
+        }
+
+        .nav02:hover{
+            background-color: rgb(255, 255, 255);
+            color: chocolate;
+        }
+
+        .nav03{
+            
+            width: 50px;
+            height: 50px;
+            margin-right: 10px; 
+            font-size: large;
+            color:black;
+            letter-spacing: 3px;
+        }
+
+        .nav03:hover{
+            background-color: rgb(255, 255, 255);
+            color: chocolate;
+        }
+
+        .nav04{
+            
+            width: 50px;
+            height: 50px;
+            margin-right: 10px; 
+            font-size: large;
+            color:black;
+            letter-spacing: 3px;
+        }
+
+        .nav04:hover{
+            background-color: rgb(255, 255, 255);
+            color: chocolate;
+        }
+
+        .nav05{
+            
+            width: 50px;
+            height: 50px;
+            margin-right: 10px; 
+            font-size: large;
+            color:black;
+            letter-spacing: 3px;
+        }
+
+        .nav05:hover{
+            background-color: rgb(255, 255, 255);
+            color: chocolate;
+        }
+
+        
+           
+            
+      
+        /* 第一組 */
+       .pic1{
+           width:100%;
+           height:500px ;
+           /* background-color: aqua; */
+           position: relative;
+           background-image: url(./image/日本富士山.jpg);
+           /* 視圖滾動 */
+           background-attachment: fixed;
+           /* background-repeat圖片不重複 */
+           background-repeat:no-repeat;
+           /* background-position圖片置中 */
+           background-position: center;
+           /* background-size圖片放大 */
+           background-size: cover; 
+
+       }
+
+       .title1{
+           width: 140px;
+           height: 50px;
+           background-color: rgb(12, 12, 12,0.5);
+           position:absolute;
+           top:calc(50% - 25px);
+           left:calc(50% - 50px);
+           letter-spacing: 5px;
+           color: bisque;
+           font-size: 25px;
+           line-height: 50px;
+           text-align: center;
+           text-decoration: none;
+           
+         
+
+       }
+
+       .title1:hover{
+        background-color: rgb(12, 12, 12);
+        
+        
+
+       }
+       .text1{
+           width: 100%;
+           height: 100px;
+           background-color: rgb(53, 138, 187);
+           text-align: center;
+           box-sizing: border-box;
+           padding: 100px 120px;
+
+       }
+/* 第二組 */
+       .pic2{
+           width:100%;
+           height:500px ;
+           /* background-color: aqua; */
+           position: relative;
+           background-image: url(https://res.klook.com/image/upload/fl_lossy.progressive/q_65/c_fill,w_1360/blogtw/2020/02/%E6%9D%B1%E4%BA%AC%E9%90%B5%E5%A1%94-01.jpg);
+           /* 視圖滾動 */
+           background-attachment: fixed;
+           /* background-repeat圖片不重複 */
+           background-repeat:no-repeat;
+           /* background-position圖片置中 */
+           background-position: center;
+           /* background-size圖片放大 */
+           background-size: cover; 
+
+       }
+      
+       .title2{
+           width: 140px;
+           height: 50px;
+           background-color: rgba(61, 60, 60, 0.5);
+           position:absolute;
+           top:calc(50% - 25px);
+           left:calc(50% - 50px);
+           letter-spacing: 5px;
+           color: bisque;
+           font-size: 25px;
+           line-height: 50px;
+           text-align: center;
+
+       }
+       .title2:hover{
+        background-color: rgb(12, 12, 12);
+       }
+
+       .text2{
+           width: 100%;
+           height: 100px;
+           background-color: rgb(98, 184, 233);
+           text-align: center;
+           box-sizing: border-box;
+           padding: 100px 120px;
+
+       }
+    /* 第三組 */
+    .pic3{
+           width:100%;
+           height:500px ;
+           /* background-color: aqua; */
+           position: relative;
+           background-image: url(https://imgcdn.cna.com.tw/www/WebPhotos/1024/20200311/820x547_484537597871.jpg);
+           /* 視圖滾動 */
+           background-attachment: fixed;
+           /* background-repeat圖片不重複 */
+           background-repeat:no-repeat;
+           /* background-position圖片置中 */
+           background-position: center;
+           /* background-size圖片放大 */
+           background-size: cover; 
+
+       }
+      
+       .title3{
+           width: 140px;
+           height: 50px;
+           background-color: rgb(12, 12, 12,0.5);
+           position:absolute;
+           top:calc(50% - 25px);
+           left:calc(50% - 50px);
+           letter-spacing: 5px;
+           color: bisque;
+           font-size: 25px;
+           line-height: 50px;
+           text-align: center;
+
+       }
+
+       .title3:hover{
+        background-color: rgb(12, 12, 12);
+       }
+       .text3{
+           width: 100%;
+           height: 100px;
+           background-color: rgb(153, 180, 196);
+           text-align: center;
+           box-sizing: border-box;
+           padding: 100px 120px;
+
+       }
+    /* 第四組 */
+    .pic4{
+           width:100%;
+           height:500px ;
+           /* background-color: aqua; */
+           position: relative;
+           background-image: url(https://rimage.gnst.jp/livejapan.com/public/article/detail/a/10/00/a1000123/img/zh-tw/a1000123_main.jpg?20210521182000&q=80&rw=750&rh=536);
+           /* 視圖滾動 */
+           background-attachment: fixed;
+           /* background-repeat圖片不重複 */
+           background-repeat:no-repeat;
+           /* background-position圖片置中 */
+           background-position: center;
+           /* background-size圖片放大 */
+           background-size: cover; 
+
+       }
+      
+       .title4{
+           width: 140px;
+           height: 50px;
+           background-color: rgb(12, 12, 12,0.5);
+           position:absolute;
+           top:calc(50% - 25px);
+           left:calc(50% - 50px);
+           letter-spacing: 5px;
+           color: bisque;
+           font-size: 25px;
+           line-height: 50px;
+           text-align: center;
+
+       }
+
+       .title4:hover{
+        background-color: rgb(12, 12, 12);
+       }
+
+       .text4{
+           width: 100%;
+           height: 100px;
+           background-color: rgb(25, 160, 238);
+           text-align: center;
+           box-sizing: border-box;
+           padding: 100px 120px;
+
+       }
+    /* 第五組 */
+    .pic5{
+           width:100%;
+           height:500px ;
+           /* background-color: aqua; */
+           position: relative;
+           background-image: url(https://s3-ap-northeast-1.amazonaws.com/thegate/2021/03/16/18/08/15/Nagoya%20castle.jpg);
+           /* 視圖滾動 */
+           background-attachment: fixed;
+           /* background-repeat圖片不重複 */
+           background-repeat:no-repeat;
+           /* background-position圖片置中 */
+           background-position: center;
+           /* background-size圖片放大 */
+           background-size: cover; 
+
+       }
+      
+       .title5{
+           width: 140px;
+           height: 50px;
+           background-color: rgb(12, 12, 12,0.5);
+           position:absolute;
+           top:calc(50% - 25px);
+           left:calc(50% - 50px);
+           letter-spacing: 5px;
+           color: bisque;
+           font-size: 25px;
+           line-height: 50px;
+           text-align: center;
+
+       }
+
+       .title5:hover{
+        background-color: rgb(12, 12, 12);
+
+       }
+
+       .text5{
+           width: 100%;
+           height: 100px;
+           background-color: rgba(112, 161, 189);
+           text-align: center;
+           box-sizing: border-box;
+           padding: 100px 120px;
+
+       }
+
+    </style>
+</head>
+
+<body>
+    <nav >
+        <div class="navtop">
+            <a href="#anchor01" class="nav01" style="text-decoration:none;">富士山</a>
+            <a href="#anchor02" class="nav02" style="text-decoration:none">東京鐵塔</a>
+            <a href="#anchor03" class="nav03" style="text-decoration:none;">迪士尼</a>
+            <a href="#anchor04" class="nav04" style="text-decoration:none">小樽運河</a>
+            <a href="#anchor05" class="nav05" style="text-decoration:none">名古屋城</a>
+ 
+        </div>
+        
+    </nav>
+
+    <div class="pic1">
+        <div id="anchor01"></div>
+        <div class="title1"  >  
+            <a href="https://www.japan.travel/tw/fuji-guide/mt-fuji-more-than-a-mountain/"target="_blank"style="text-decoration:none;color:white;">富士山 </a>
+        </a> </div>
+       
+    </div>
+    <div class="text1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolorum animi assumenda architecto quaerat dignissimos eos ea a itaque illum nisi quisquam eum debitis, ullam praesentium deleniti illo natus cupiditate!
+    </div>
+
+    <div class="pic2">
+        <div id="anchor02"></div>
+        <div class="title2"  > <a href="https://www.tokyotower.co.jp/zh/"target="_blank"style="text-decoration:none;color:white;">東京鐵塔</a></div>
+    </div>
+    <div class="text2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolorum animi assumenda architecto quaerat dignissimos eos ea a itaque illum nisi quisquam eum debitis, ullam praesentium deleniti illo natus cupiditate!
+    </div>
+
+    <div class="pic3">
+        <div id="anchor03"></div>
+        <div class="title3"><a href="https://www.tokyodisneyresort.jp/tc/tdl/"target="_blank"style="text-decoration:none;color:white;">迪士尼</a></div>
+    </div>
+    <div class="text3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolorum animi assumenda architecto quaerat dignissimos eos ea a itaque illum nisi quisquam eum debitis, ullam praesentium deleniti illo natus cupiditate!
+    </div>
+
+    <div class="pic4">
+        <div id="anchor04"></div>
+        <div class="title4" ><a href="https://livejapan.com/zh-tw/in-hokkaido/in-pref-hokkaido/in-otaru/spot-lj0007698/"target="_blank"style="text-decoration:none;color:white;">小樽運河</a></div>
+    </div>
+    <div class="text4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolorum animi assumenda architecto quaerat dignissimos eos ea a itaque illum nisi quisquam eum debitis, ullam praesentium deleniti illo natus cupiditate!
+    </div>
+
+    <div class="pic5">
+        <div id="anchor05"></div>
+        <div class="title5"><a href="https://www.nagoya-info.jp/zhtw/spot/detail/1/"target="_blank"style="text-decoration:none;color:white;">名古屋城</a></div>
+    </div>
+    <div class="text5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, dolorum animi assumenda architecto quaerat dignissimos eos ea a itaque illum nisi quisquam eum debitis, ullam praesentium deleniti illo natus cupiditate!
+    </div>
+    
+</body>
+</html>
